@@ -5,8 +5,6 @@
 //  Created by Fernando Salom Carratala on 6/11/22.
 //
 
-import UIKit
-
 final class HomeRouter {
     weak var viewController: HomeViewController?
 
@@ -15,6 +13,4 @@ final class HomeRouter {
     }
 }
 
-extension HomeRouter: HomeRouterProtocol {
-}
-
+extension HomeRouter: HomeRouterProtocol {}

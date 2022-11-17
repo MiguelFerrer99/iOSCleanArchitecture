@@ -1,8 +1,8 @@
 //
 //  ViewModelProtocol.swift
-//  clean
+//  iOSCleanArchitecture
 //
-//  Created by Fernando Salom Carratala on 6/11/22.
+//  Created by Miguel Ferrer Fornali on 17/11/22.
 //
 
 protocol ViewModelProtocol {

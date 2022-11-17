@@ -14,9 +14,4 @@ final class HomeViewController: BaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
-    @IBAction func onPressed(_ sender: Any) {
-        self.navigationController?.pushViewController(ListBuilder().build(), animated: true)
-    }
 }

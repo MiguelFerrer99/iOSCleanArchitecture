@@ -5,10 +5,7 @@
 //  Created by Fernando Salom Carratala on 6/11/22.
 //
 
-import Foundation
-import UIKit
-
-final class HomeBuilder: HomeBuilderProtocol {
+final class HomeBuilder {
     func build() -> HomeViewController {
         let viewController = HomeViewController()
         let router = HomeRouter(viewController: viewController)
