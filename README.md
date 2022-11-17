@@ -86,13 +86,15 @@ Each module is composed by a series of files that must be implemented in each on
 
 Fernando Salom
 
-https://fernandosalom.es
+https://github.com/fsalom
 
 https://www.linkedin.com/in/fsalom/
 
 ## Co-author
 
 Miguel Ferrer
+
+https://github.com/MiguelFerrer99
 
 https://www.linkedin.com/in/miguel-ferrer-fornali-6145b017a/
 
