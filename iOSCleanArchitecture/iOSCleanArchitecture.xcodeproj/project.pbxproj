@@ -61,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410DB71C2927FC1000176DE9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				41C2B9122926DCAF00ADFD30 /* HomeProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		41C2B9062926D79600ADFD30 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +153,7 @@
 				C1D3C3252916740B000C522C /* App */,
 				C159551529239CAA00F76A1A /* Utils */,
 				41C2B9062926D79600ADFD30 /* Components */,
-				C1D3C32C2917B229000C522C /* Modules */,
+				C1D3C32C2917B229000C522C /* Scenes */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -209,22 +217,22 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
-		C1D3C32C2917B229000C522C /* Modules */ = {
+		C1D3C32C2917B229000C522C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				C1D3C3362917B30E000C522C /* Home */,
 			);
-			path = Modules;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		C1D3C3362917B30E000C522C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				41C2B9122926DCAF00ADFD30 /* HomeProtocols.swift */,
 				41C2B9072926D7F900ADFD30 /* Builder */,
+				410DB71C2927FC1000176DE9 /* Protocols */,
 				41C2B9082926D83C00ADFD30 /* Router */,
-				41C2B9092926D84900ADFD30 /* ViewModel */,
 				41C2B90A2926D85500ADFD30 /* View */,
+				41C2B9092926D84900ADFD30 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
