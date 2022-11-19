@@ -7,20 +7,20 @@ Clean architecture is not a new concept as we can see here:
 
 ![CleanArchitecture](https://user-images.githubusercontent.com/56566735/202541752-2d7d0acc-118d-4a9e-b2cc-60020dcae4b5.jpeg)
 
-Basically we have to be clear about one concept and that is Dependency we have to isolate the dependencies of our code between layers to isolate and create only one direction of dependencies that goes from the outermost layer to the innermost layer.
+Basically we have to be clear about one concept and that is Dependency we have to isolate the dependencies of our code between layers to isolate and create only one direction of dependencies that goes from the outermost layer to the innermost layer
 
 ## Project structure
 
-Just as the description of the layer system must specify and describe what each of these does, we must translate to our project the same behavior. To do this we will create a series of folders that will contain the logic of each of these layers.
+Just as the description of the layer system must specify and describe what each of these does, we must translate to our project the same behavior. To do this we will create a series of folders that will contain the logic of each of these layers
 
 ### Main folders
 
 This would be the distribution of folders that will contain our project:
 
 ```
-├── Core
-├── Data
 ├── DI
+├── Services
+├── Data
 ├── Domain
 └── Presentation
 ```
@@ -30,57 +30,59 @@ This would be the distribution of folders that will contain our project:
 Each of these components has a function and should not be mixed with each other. Being clear about where each of the logics we implement should go:
 
 ```
-├── Core
+├── DI
+├── Services
+│   ├── DB
+│   └── API
 ├── Data
-|   ├── DTO
-│   └── Repository
-├── Di
+│   ├── DTO
+│   └── Repositories
 ├── Domain
-│    ├── UseCase
-│    └── Entity
+│    ├── BO
+│    └── UseCases
 └── Presentation
     ├── App
-    └── Modules
+    ├── Components
+    └── Scenes
 ```
 
-- **Core**: This layer is responsible for storing all those components that are common to all layers. For example: constants, configuration data etc.
+- **DI**: This layer contains the main tree of dependency injection of our project that is used throughout the app
 
-- **Data**: This layer is the one that will contain all the components that are in charge of obtaining and storing information.
-    - **DTO**: we will store all the Data Transfer Object (DTO).
-    - **Repository**: contains all implementations to obtain data either from an API or from a database.
+- **Services**: This layer is responsible for getting data from different environments like API, Local DB, Cache, etc
+
+- **Data**: This layer is the one that will contain all the components that are in charge of obtaining and storing information
+    - **DTO**: We will store all the Data Transfer Object (DTO)
+    - **Repository**: Contains all implementations to obtain data either from an API or from a database, divided by scenes
+
+- **Domain**: This layer is in charge of defining entities and use cases per Domain
+    - **BO**: These are models used beyond the DTO to manage database or core data
+    - **UseCases**: List all the functionalities of our application, divided by scenes. Example: Get, Delete, Create, Update
     
-- **DI**: This layer contains the dependency injection of our project that is used throughout the app. In our case it will contain the Container.swift that contains all the dependencies of the project.
+- **Presentation**: The presentation layer will keep everything related to UI and its management
 
-- **Domain**: This layer is in charge of defining entities and use cases per Domain.
-    - **Entity**: These are models used beyond the DTO to manage database or core data.
-    - **UseCase**: List all the functionalities of our application. Example: Get, Delete, Create, Update.
-    
-- **Presentation**: The presentation layer will keep everything related to UI and its management.
+### Presentation layer - Scenes
 
-### Presentation layer - Modules
-
-Each module is composed by a series of files that must be implemented in each one of them:
+Each sceme is composed by a series of files that must be implemented in each one of them:
 
 ```
-└── Presentation
-    └── Modules
-        ├── ToDoBuilder
-        ├── ToDoProtocols
-        ├── ToDoRouter
-        ├── ToDoViewModel
-        ├── ToDoViewController
-        └── ToDoViewController(UI)
+└── Scenes
+    └── Home
+        ├── Coordinator
+        ├── Dependencies
+        ├── Representables
+        ├── ViewModel
+        └── View
 ```
 
-- **Builder**: Constructor of the viewController and its dependencies.
+- **Coordinator**: Responsible for the scene navigation
 
-- **Protocols**: Responsible for declaring all protocols to be used in the application.   
+- **Dependencies**: Scene dependencies needed to build the entire scene
 
-- Router**: Responsible for the navigation by the controller
+- **Representables**: Protocols with needed parameters to print the UI layer, shared between ViewModel, ViewController and subviews
 
-- **ViewController**: UI controller to manage the module logic
+- **ViewModel**: Responsible for the communications between UseCases and View. Thanks to reactive Combine states
 
-- **ViewController(xib)**: Visual layer of the controller
+- **View**: Visual layer of the controller, starting with the ViewController and divided by subviews. Thanks to reactive Combine events
 
 ## Author
 
