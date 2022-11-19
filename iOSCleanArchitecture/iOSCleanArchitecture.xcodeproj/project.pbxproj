@@ -28,6 +28,8 @@
 		41882BD829298D700044E186 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BD729298D700044E186 /* ExampleView.swift */; };
 		41882BDA29298E320044E186 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BD929298E320044E186 /* XibView.swift */; };
 		41882BDC29298EC30044E186 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BDB29298EC30044E186 /* UIView+Extension.swift */; };
+		4198842229299E06002B21E9 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4198842129299E06002B21E9 /* Example.swift */; };
+		4198842429299E60002B21E9 /* HomeRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4198842329299E60002B21E9 /* HomeRepresentable.swift */; };
 		41BCB891292990F600E6E757 /* ExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BCB890292990F600E6E757 /* ExampleView.xib */; };
 		41BCB8932929936100E6E757 /* HomeDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB8922929936100E6E757 /* HomeDependenciesResolver.swift */; };
 		41BCB8952929937C00E6E757 /* HomeExternalDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB8942929937C00E6E757 /* HomeExternalDependenciesResolver.swift */; };
@@ -65,6 +67,8 @@
 		41882BD729298D700044E186 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		41882BD929298E320044E186 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		41882BDB29298EC30044E186 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4198842129299E06002B21E9 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		4198842329299E60002B21E9 /* HomeRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepresentable.swift; sourceTree = "<group>"; };
 		41BCB890292990F600E6E757 /* ExampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleView.xib; sourceTree = "<group>"; };
 		41BCB8922929936100E6E757 /* HomeDependenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependenciesResolver.swift; sourceTree = "<group>"; };
 		41BCB8942929937C00E6E757 /* HomeExternalDependenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExternalDependenciesResolver.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		410B18C529290E4400A69FD6 /* Representables */ = {
 			isa = PBXGroup;
 			children = (
+				4198842329299E60002B21E9 /* HomeRepresentable.swift */,
 			);
 			path = Representables;
 			sourceTree = "<group>";
@@ -223,13 +228,6 @@
 				410DB74729282E1500176DE9 /* LocalizableStrings.swift */,
 			);
 			path = Localizables;
-			sourceTree = "<group>";
-		};
-		410DB74A29282E2F00176DE9 /* Lotties */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lotties;
 			sourceTree = "<group>";
 		};
 		410DB74D29282E5E00176DE9 /* Basics */ = {
@@ -370,6 +368,7 @@
 		C1D3C32A2917B1B5000C522C /* BO */ = {
 			isa = PBXGroup;
 			children = (
+				4198842129299E06002B21E9 /* Example.swift */,
 			);
 			path = BO;
 			sourceTree = "<group>";
@@ -400,7 +399,6 @@
 				C1780325291673DA00E9E0AE /* Assets.xcassets */,
 				C178032A291673DA00E9E0AE /* Info.plist */,
 				410DB74329282E1500176DE9 /* Localizables */,
-				410DB74A29282E2F00176DE9 /* Lotties */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -488,6 +486,7 @@
 				410DB74029282DB700176DE9 /* AuthEndpoint.swift in Sources */,
 				C1D3C3452917B816000C522C /* HomeViewModel.swift in Sources */,
 				410DB75529282F7A00176DE9 /* APILogger.swift in Sources */,
+				4198842229299E06002B21E9 /* Example.swift in Sources */,
 				4106092D2928602600E44A77 /* TokenDTO.swift in Sources */,
 				41BCB8932929936100E6E757 /* HomeDependenciesResolver.swift in Sources */,
 				410DB73C29282DB700176DE9 /* APIService.swift in Sources */,
@@ -506,6 +505,7 @@
 				410DB75A29282FC900176DE9 /* APIConfiguration.swift in Sources */,
 				41BCB8952929937C00E6E757 /* HomeExternalDependenciesResolver.swift in Sources */,
 				410B18C92929162400A69FD6 /* HomeUseCaseRepresentables.swift in Sources */,
+				4198842429299E60002B21E9 /* HomeRepresentable.swift in Sources */,
 				410DB72B29282AD300176DE9 /* HomeRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
