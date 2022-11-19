@@ -9,22 +9,28 @@
 /* Begin PBXBuildFile section */
 		4106092D2928602600E44A77 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106092C2928602600E44A77 /* TokenDTO.swift */; };
 		410B18C92929162400A69FD6 /* HomeUseCaseRepresentables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B18C82929162400A69FD6 /* HomeUseCaseRepresentables.swift */; };
-		410DB722292800B300176DE9 /* HomeDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB721292800B300176DE9 /* HomeDependenciesResolver.swift */; };
-		410DB724292800C500176DE9 /* HomeExternalDepdendenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB723292800C500176DE9 /* HomeExternalDepdendenciesResolver.swift */; };
 		410DB72929281A3B00176DE9 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB72829281A3B00176DE9 /* AppDependencies.swift */; };
 		410DB72B29282AD300176DE9 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB72A29282AD300176DE9 /* HomeRepository.swift */; };
-		410DB73C29282DB700176DE9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73229282DB700176DE9 /* Network.swift */; };
+		410DB73C29282DB700176DE9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73229282DB700176DE9 /* APIService.swift */; };
 		410DB73D29282DB700176DE9 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73329282DB700176DE9 /* Pagination.swift */; };
-		410DB73E29282DB700176DE9 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73429282DB700176DE9 /* AuthManager.swift */; };
-		410DB73F29282DB700176DE9 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73529282DB700176DE9 /* Endpoint.swift */; };
-		410DB74029282DB700176DE9 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73729282DB700176DE9 /* Auth.swift */; };
+		410DB73E29282DB700176DE9 /* APIAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73429282DB700176DE9 /* APIAuthManager.swift */; };
+		410DB73F29282DB700176DE9 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73529282DB700176DE9 /* APIEndpoint.swift */; };
+		410DB74029282DB700176DE9 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73729282DB700176DE9 /* AuthEndpoint.swift */; };
 		410DB74829282E1500176DE9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 410DB74429282E1500176DE9 /* Localizable.strings */; };
 		410DB74929282E1500176DE9 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB74729282E1500176DE9 /* LocalizableStrings.swift */; };
 		410DB75329282F7A00176DE9 /* AppInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB74F29282F7900176DE9 /* AppInfoManager.swift */; };
 		410DB75429282F7A00176DE9 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75029282F7900176DE9 /* Optional+Extension.swift */; };
-		410DB75529282F7A00176DE9 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75129282F7900176DE9 /* Log.swift */; };
+		410DB75529282F7A00176DE9 /* APILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75129282F7900176DE9 /* APILogger.swift */; };
 		410DB75629282F7A00176DE9 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75229282F7A00176DE9 /* Collection+Extension.swift */; };
 		410DB75A29282FC900176DE9 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75929282FC900176DE9 /* APIConfiguration.swift */; };
+		41882BD0292984520044E186 /* Example.json in Resources */ = {isa = PBXBuildFile; fileRef = 41882BCF292984520044E186 /* Example.json */; };
+		41882BD2292989D20044E186 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BD1292989D20044E186 /* DBService.swift */; };
+		41882BD829298D700044E186 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BD729298D700044E186 /* ExampleView.swift */; };
+		41882BDA29298E320044E186 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BD929298E320044E186 /* XibView.swift */; };
+		41882BDC29298EC30044E186 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BDB29298EC30044E186 /* UIView+Extension.swift */; };
+		41BCB891292990F600E6E757 /* ExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BCB890292990F600E6E757 /* ExampleView.xib */; };
+		41BCB8932929936100E6E757 /* HomeDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB8922929936100E6E757 /* HomeDependenciesResolver.swift */; };
+		41BCB8952929937C00E6E757 /* HomeExternalDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB8942929937C00E6E757 /* HomeExternalDependenciesResolver.swift */; };
 		C15BA602291AAC7300E0CF95 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15BA601291AAC7300E0CF95 /* HomeViewController.xib */; };
 		C15BA615291AAE7600E0CF95 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA614291AAE7600E0CF95 /* HomeUseCase.swift */; };
 		C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031C291673D800E9E0AE /* AppDelegate.swift */; };
@@ -39,23 +45,29 @@
 /* Begin PBXFileReference section */
 		4106092C2928602600E44A77 /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
 		410B18C82929162400A69FD6 /* HomeUseCaseRepresentables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCaseRepresentables.swift; sourceTree = "<group>"; };
-		410DB721292800B300176DE9 /* HomeDependenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependenciesResolver.swift; sourceTree = "<group>"; };
-		410DB723292800C500176DE9 /* HomeExternalDepdendenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExternalDepdendenciesResolver.swift; sourceTree = "<group>"; };
 		410DB72829281A3B00176DE9 /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		410DB72A29282AD300176DE9 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		410DB73229282DB700176DE9 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		410DB73229282DB700176DE9 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		410DB73329282DB700176DE9 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
-		410DB73429282DB700176DE9 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		410DB73529282DB700176DE9 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		410DB73729282DB700176DE9 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		410DB73429282DB700176DE9 /* APIAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAuthManager.swift; sourceTree = "<group>"; };
+		410DB73529282DB700176DE9 /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		410DB73729282DB700176DE9 /* AuthEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		410DB74529282E1500176DE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		410DB74629282E1500176DE9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		410DB74729282E1500176DE9 /* LocalizableStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		410DB74F29282F7900176DE9 /* AppInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoManager.swift; sourceTree = "<group>"; };
 		410DB75029282F7900176DE9 /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
-		410DB75129282F7900176DE9 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		410DB75129282F7900176DE9 /* APILogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILogger.swift; sourceTree = "<group>"; };
 		410DB75229282F7A00176DE9 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		410DB75929282FC900176DE9 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		41882BCF292984520044E186 /* Example.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Example.json; sourceTree = "<group>"; };
+		41882BD1292989D20044E186 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		41882BD729298D700044E186 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		41882BD929298E320044E186 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		41882BDB29298EC30044E186 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		41BCB890292990F600E6E757 /* ExampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleView.xib; sourceTree = "<group>"; };
+		41BCB8922929936100E6E757 /* HomeDependenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependenciesResolver.swift; sourceTree = "<group>"; };
+		41BCB8942929937C00E6E757 /* HomeExternalDependenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExternalDependenciesResolver.swift; sourceTree = "<group>"; };
 		C15BA601291AAC7300E0CF95 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C15BA614291AAE7600E0CF95 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		C1780319291673D800E9E0AE /* iOSCleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +97,7 @@
 			children = (
 				410DB75229282F7A00176DE9 /* Collection+Extension.swift */,
 				410DB75029282F7900176DE9 /* Optional+Extension.swift */,
+				41882BDB29298EC30044E186 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -134,6 +147,7 @@
 		410B18C72929136C00A69FD6 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				41882BD1292989D20044E186 /* DBService.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -141,8 +155,8 @@
 		410DB7202928008D00176DE9 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				410DB721292800B300176DE9 /* HomeDependenciesResolver.swift */,
-				410DB723292800C500176DE9 /* HomeExternalDepdendenciesResolver.swift */,
+				41BCB8922929936100E6E757 /* HomeDependenciesResolver.swift */,
+				41BCB8942929937C00E6E757 /* HomeExternalDependenciesResolver.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -168,7 +182,7 @@
 			children = (
 				410DB73629282DB700176DE9 /* Endpoints */,
 				410DB72E29282DB700176DE9 /* Mocks */,
-				410DB73129282DB700176DE9 /* Network */,
+				410DB73129282DB700176DE9 /* APIService */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -176,27 +190,28 @@
 		410DB72E29282DB700176DE9 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				41882BCF292984520044E186 /* Example.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		410DB73129282DB700176DE9 /* Network */ = {
+		410DB73129282DB700176DE9 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
 				410DB75929282FC900176DE9 /* APIConfiguration.swift */,
-				410DB73429282DB700176DE9 /* AuthManager.swift */,
-				410DB73529282DB700176DE9 /* Endpoint.swift */,
-				410DB75129282F7900176DE9 /* Log.swift */,
-				410DB73229282DB700176DE9 /* Network.swift */,
+				410DB73429282DB700176DE9 /* APIAuthManager.swift */,
+				410DB73529282DB700176DE9 /* APIEndpoint.swift */,
+				410DB75129282F7900176DE9 /* APILogger.swift */,
+				410DB73229282DB700176DE9 /* APIService.swift */,
 				410DB73329282DB700176DE9 /* Pagination.swift */,
 			);
-			path = Network;
+			path = APIService;
 			sourceTree = "<group>";
 		};
 		410DB73629282DB700176DE9 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				410DB73729282DB700176DE9 /* Auth.swift */,
+				410DB73729282DB700176DE9 /* AuthEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -240,9 +255,19 @@
 			path = iOSCleanArchitecture;
 			sourceTree = "<group>";
 		};
+		41882BDD292990AE0044E186 /* ExampleView */ = {
+			isa = PBXGroup;
+			children = (
+				41BCB890292990F600E6E757 /* ExampleView.xib */,
+				41882BD729298D700044E186 /* ExampleView.swift */,
+			);
+			path = ExampleView;
+			sourceTree = "<group>";
+		};
 		41C2B9062926D79600ADFD30 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				41882BDD292990AE0044E186 /* ExampleView */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -276,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				410DB74F29282F7900176DE9 /* AppInfoManager.swift */,
+				41882BD929298E320044E186 /* XibView.swift */,
 				410B18BE2928F94900A69FD6 /* Extensions */,
 			);
 			path = Utils;
@@ -438,10 +464,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41882BD0292984520044E186 /* Example.json in Resources */,
 				410DB74829282E1500176DE9 /* Localizable.strings in Resources */,
 				C1780329291673DA00E9E0AE /* LaunchScreen.storyboard in Resources */,
 				C1780326291673DA00E9E0AE /* Assets.xcassets in Resources */,
 				C15BA602291AAC7300E0CF95 /* HomeViewController.xib in Resources */,
+				41BCB891292990F600E6E757 /* ExampleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,27 +480,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				410DB73F29282DB700176DE9 /* Endpoint.swift in Sources */,
+				410DB73F29282DB700176DE9 /* APIEndpoint.swift in Sources */,
 				410DB72929281A3B00176DE9 /* AppDependencies.swift in Sources */,
 				C1D3C3382917B340000C522C /* HomeViewController.swift in Sources */,
 				C15BA615291AAE7600E0CF95 /* HomeUseCase.swift in Sources */,
-				410DB73E29282DB700176DE9 /* AuthManager.swift in Sources */,
-				410DB74029282DB700176DE9 /* Auth.swift in Sources */,
-				410DB724292800C500176DE9 /* HomeExternalDepdendenciesResolver.swift in Sources */,
+				410DB73E29282DB700176DE9 /* APIAuthManager.swift in Sources */,
+				410DB74029282DB700176DE9 /* AuthEndpoint.swift in Sources */,
 				C1D3C3452917B816000C522C /* HomeViewModel.swift in Sources */,
-				410DB75529282F7A00176DE9 /* Log.swift in Sources */,
+				410DB75529282F7A00176DE9 /* APILogger.swift in Sources */,
 				4106092D2928602600E44A77 /* TokenDTO.swift in Sources */,
-				410DB73C29282DB700176DE9 /* Network.swift in Sources */,
+				41BCB8932929936100E6E757 /* HomeDependenciesResolver.swift in Sources */,
+				410DB73C29282DB700176DE9 /* APIService.swift in Sources */,
 				410DB75629282F7A00176DE9 /* Collection+Extension.swift in Sources */,
+				41882BDC29298EC30044E186 /* UIView+Extension.swift in Sources */,
 				C1D3C3492917B952000C522C /* HomeCoordinator.swift in Sources */,
 				410DB75329282F7A00176DE9 /* AppInfoManager.swift in Sources */,
-				410DB722292800B300176DE9 /* HomeDependenciesResolver.swift in Sources */,
 				C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */,
 				410DB74929282E1500176DE9 /* LocalizableStrings.swift in Sources */,
+				41882BD2292989D20044E186 /* DBService.swift in Sources */,
 				410DB73D29282DB700176DE9 /* Pagination.swift in Sources */,
+				41882BD829298D700044E186 /* ExampleView.swift in Sources */,
 				C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */,
 				410DB75429282F7A00176DE9 /* Optional+Extension.swift in Sources */,
+				41882BDA29298E320044E186 /* XibView.swift in Sources */,
 				410DB75A29282FC900176DE9 /* APIConfiguration.swift in Sources */,
+				41BCB8952929937C00E6E757 /* HomeExternalDependenciesResolver.swift in Sources */,
 				410B18C92929162400A69FD6 /* HomeUseCaseRepresentables.swift in Sources */,
 				410DB72B29282AD300176DE9 /* HomeRepository.swift in Sources */,
 			);

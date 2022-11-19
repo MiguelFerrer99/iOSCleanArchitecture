@@ -1,5 +1,5 @@
 //
-//  Endpoint.swift
+//  APIEndpoint.swift
 //  iOSCleanArchitecture
 //
 //  Created by Miguel Ferrer Fornali on 19/11/22.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Endpoint {
+final class APIEndpoint {
     enum HTTPMethod {
         case get
         case post
@@ -47,7 +47,7 @@ struct Endpoint {
     var mock: String
     var request: URLRequest {
         get {
-            let url = Endpoint.getURL(path: self.path)
+            let url = APIEndpoint.getURL(path: self.path)
             var request = URLRequest(url: url)
             request.httpMethod = self.httpMethod.rawValue
             
@@ -92,7 +92,7 @@ struct Endpoint {
     static func getURL(path: String) -> URL {
         guard let url = URL(string: APIConfiguration.shared.BASE_URL
         )?.appendingPathComponent(path) else {
-            Log.this(path, type: .error)
+            APILogger.this(path, type: .error)
             fatalError()
         }
         return url

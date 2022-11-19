@@ -1,5 +1,5 @@
 //
-//  Log.swift
+//  APILogger.swift
 //  iOSCleanArchitecture
 //
 //  Created by Miguel Ferrer Fornali on 19/11/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LogType {
+enum APILoggerType {
     case error
     case info
     case warning
@@ -15,7 +15,7 @@ enum LogType {
     case verbose
 }
 
-struct Log {
+final class APILogger {
     static func time() -> String {
         let date = Date()
         let formatter = DateFormatter()
@@ -23,7 +23,7 @@ struct Log {
         return formatter.string(from: date)
     }
     
-    static func this(_ message: String, file: String = #file, function: String = #function, line: Int = #line, type: LogType = .debug) {
+    static func this(_ message: String, file: String = #file, function: String = #function, line: Int = #line, type: APILoggerType = .debug) {
         let path = file.split(separator: "/")
         let file = path.last?.split(separator: ".")
         
@@ -70,7 +70,7 @@ struct Log {
         print("------------------------------------------")
     }
     
-    static func thisError(_ error : NetworkError) {
+    static func thisError(_ error : APIServiceError) {
         print("🤬 ERROR: \(error.localizedDescription)")
         print("🤬 Description: \(error)")
         print("------------------------------------------")
