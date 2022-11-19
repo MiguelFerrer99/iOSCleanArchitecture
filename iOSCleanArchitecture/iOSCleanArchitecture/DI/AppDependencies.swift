@@ -10,6 +10,8 @@ import UIKit
 final class AppDependencies {
     static let shared = AppDependencies()
     
+    var window: UIWindow?
+    
     private init() {}
     
     func resolve() -> UINavigationController {
