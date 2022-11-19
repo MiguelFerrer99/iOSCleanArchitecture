@@ -1,0 +1,10 @@
+/*
+  Localizable.strings
+  iOSCleanArchitecture
+
+  Created by Miguel Ferrer Fornali on 19/11/22.
+  
+*/
+
+/* Home */
+"home_title" = "Home";
