@@ -1,5 +1,5 @@
 //
-//  AuthManager.swift
+//  APIAuthManager.swift
 //  iOSCleanArchitecture
 //
 //  Created by Miguel Ferrer Fornali on 19/11/22.
@@ -7,20 +7,20 @@
 
 import Foundation
 
-enum AuthError: Error {
+enum APIAuthManagerError: Error {
     case missingToken
     case missingExpiresIn
     case badRequest
     case tokenNotFound
 }
 
-actor AuthManager {
+actor APIAuthManager {
     private var refreshTask: Task<String, Error>?
     
     // MARK: Return accessToken or error
     func getAccesToken() async throws -> String? {
         guard let accessToken = AppInfoManager.get(stringFor: .access_token) else {
-            throw AuthError.missingToken
+            throw APIAuthManagerError.missingToken
         }
         return accessToken
     }
@@ -28,7 +28,7 @@ actor AuthManager {
     // MARK: Return if access token is still valid or thrwo an error
     func isValid() async throws -> Bool {
         guard let expires = Calendar.current.date(byAdding: .second, value: AppInfoManager.get(intFor: .expires_in), to: Date()) else {
-            throw AuthError.missingExpiresIn
+            throw APIAuthManagerError.missingExpiresIn
         }
         return expires > Date() ? true : false
     }
@@ -41,7 +41,7 @@ actor AuthManager {
         let isValid = try await isValid()
         if isValid {
             guard let accessToken = try await getAccesToken() else {
-                throw AuthError.missingToken
+                throw APIAuthManagerError.missingToken
             }
             return accessToken
         }
@@ -56,7 +56,7 @@ actor AuthManager {
         let task = Task { () throws -> String in
             defer { refreshTask = nil }
             guard let refreshToken = AppInfoManager.get(stringFor: .refresh_token) else {
-                throw AuthError.tokenNotFound
+                throw APIAuthManagerError.tokenNotFound
             }
             return try await refresh(with: refreshToken)
         }
@@ -67,12 +67,12 @@ actor AuthManager {
     // MARK: Call to login service
     func authenticate(with parameters: [String: Any]) async throws -> String {
         do {
-            let token = try await Network.shared.load(endpoint: AuthEndpoint.login(parameters).endpoint, of: TokenDTO.self)
+            let token = try await APIService.shared.load(endpoint: AuthEndpoint.login(parameters).endpoint, of: TokenDTO.self)
             save(this: token)
             return token.accessToken
         } catch let error {
-            Log.thisError(error)
-            throw AuthError.badRequest
+            APILogger.thisError(error)
+            throw APIAuthManagerError.badRequest
         }
     }
     
@@ -92,13 +92,13 @@ actor AuthManager {
                 "client_secret": APIConfiguration.shared.API_KEY,
                 "refresh_token": refreshToken
             ]
-            let token = try await Network.shared.load(endpoint: AuthEndpoint.refreshToken(parameters).endpoint, of: TokenDTO.self)
+            let token = try await APIService.shared.load(endpoint: AuthEndpoint.refreshToken(parameters).endpoint, of: TokenDTO.self)
             save(this: token)
             return token.accessToken
         } catch let error {
-            Log.thisError(error)
+            APILogger.thisError(error)
             AppInfoManager.clear()
-            throw AuthError.badRequest
+            throw APIAuthManagerError.badRequest
         }
     }
 }

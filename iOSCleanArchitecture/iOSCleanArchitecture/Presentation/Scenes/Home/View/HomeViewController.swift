@@ -9,9 +9,16 @@ import UIKit
 import Combine
 
 final class HomeViewController: UIViewController {
+    @IBOutlet private weak var stackView: UIStackView!
+    
     private let viewModel: HomeViewModel
     private let dependencies: HomeDependenciesResolver
     private var subscriptions: Set<AnyCancellable> = []
+    private lazy var exampleView: ExampleView = {
+        let view = ExampleView()
+        view.configure(with: "Hello, World!")
+        return view
+    }()
 
     init(dependencies: HomeDependenciesResolver) {
         self.dependencies = dependencies
@@ -39,7 +46,11 @@ final class HomeViewController: UIViewController {
 
 private extension HomeViewController {
     func setAppearance() {
-        // Configure views
+        configureExampleView()
+    }
+    
+    func configureExampleView() {
+        stackView.addArrangedSubview(exampleView)
     }
     
     func bind() {
