@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4106092D2928602600E44A77 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106092C2928602600E44A77 /* TokenDTO.swift */; };
+		410B18C92929162400A69FD6 /* HomeUseCaseRepresentables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B18C82929162400A69FD6 /* HomeUseCaseRepresentables.swift */; };
 		410DB722292800B300176DE9 /* HomeDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB721292800B300176DE9 /* HomeDependenciesResolver.swift */; };
 		410DB724292800C500176DE9 /* HomeExternalDepdendenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB723292800C500176DE9 /* HomeExternalDepdendenciesResolver.swift */; };
 		410DB72929281A3B00176DE9 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB72829281A3B00176DE9 /* AppDependencies.swift */; };
@@ -23,7 +24,7 @@
 		410DB75429282F7A00176DE9 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75029282F7900176DE9 /* Optional+Extension.swift */; };
 		410DB75529282F7A00176DE9 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75129282F7900176DE9 /* Log.swift */; };
 		410DB75629282F7A00176DE9 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75229282F7A00176DE9 /* Collection+Extension.swift */; };
-		410DB75A29282FC900176DE9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75929282FC900176DE9 /* Configuration.swift */; };
+		410DB75A29282FC900176DE9 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75929282FC900176DE9 /* APIConfiguration.swift */; };
 		C15BA602291AAC7300E0CF95 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C15BA601291AAC7300E0CF95 /* HomeViewController.xib */; };
 		C15BA615291AAE7600E0CF95 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15BA614291AAE7600E0CF95 /* HomeUseCase.swift */; };
 		C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C178031C291673D800E9E0AE /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		4106092C2928602600E44A77 /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
+		410B18C82929162400A69FD6 /* HomeUseCaseRepresentables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCaseRepresentables.swift; sourceTree = "<group>"; };
 		410DB721292800B300176DE9 /* HomeDependenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependenciesResolver.swift; sourceTree = "<group>"; };
 		410DB723292800C500176DE9 /* HomeExternalDepdendenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExternalDepdendenciesResolver.swift; sourceTree = "<group>"; };
 		410DB72829281A3B00176DE9 /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 		410DB75029282F7900176DE9 /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		410DB75129282F7900176DE9 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		410DB75229282F7A00176DE9 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
-		410DB75929282FC900176DE9 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		410DB75929282FC900176DE9 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		C15BA601291AAC7300E0CF95 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		C15BA614291AAE7600E0CF95 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		C1780319291673D800E9E0AE /* iOSCleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,14 +80,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		410609282928556D00E44A77 /* Managers */ = {
+		410B18BE2928F94900A69FD6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				410DB73629282DB700176DE9 /* Endpoints */,
-				410DB72E29282DB700176DE9 /* Mocks */,
-				410DB73129282DB700176DE9 /* Network */,
+				410DB75229282F7A00176DE9 /* Collection+Extension.swift */,
+				410DB75029282F7900176DE9 /* Optional+Extension.swift */,
 			);
-			path = Managers;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		410B18C129290B7600A69FD6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C1D3C32A2917B1B5000C522C /* BO */,
+				410DB72529280BC300176DE9 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		410B18C229290C7B00A69FD6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				410DB72A29282AD300176DE9 /* HomeRepository.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		410B18C329290C8E00A69FD6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C15BA614291AAE7600E0CF95 /* HomeUseCase.swift */,
+				410B18C82929162400A69FD6 /* HomeUseCaseRepresentables.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		410B18C529290E4400A69FD6 /* Representables */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Representables;
+			sourceTree = "<group>";
+		};
+		410B18C62929133C00A69FD6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				410B18C72929136C00A69FD6 /* DB */,
+				410DB72C29282D0D00176DE9 /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		410B18C72929136C00A69FD6 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		410DB7202928008D00176DE9 /* Dependencies */ = {
@@ -100,16 +150,9 @@
 		410DB72529280BC300176DE9 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				C15BA614291AAE7600E0CF95 /* HomeUseCase.swift */,
+				410B18C329290C8E00A69FD6 /* Home */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		410DB72629280BD900176DE9 /* Representables */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Representables;
 			sourceTree = "<group>";
 		};
 		410DB72729281A3B00176DE9 /* DI */ = {
@@ -123,8 +166,9 @@
 		410DB72C29282D0D00176DE9 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				410609282928556D00E44A77 /* Managers */,
-				C1D3C32829167446000C522C /* Repositories */,
+				410DB73629282DB700176DE9 /* Endpoints */,
+				410DB72E29282DB700176DE9 /* Mocks */,
+				410DB73129282DB700176DE9 /* Network */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -139,10 +183,12 @@
 		410DB73129282DB700176DE9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				410DB73229282DB700176DE9 /* Network.swift */,
-				410DB73329282DB700176DE9 /* Pagination.swift */,
+				410DB75929282FC900176DE9 /* APIConfiguration.swift */,
 				410DB73429282DB700176DE9 /* AuthManager.swift */,
 				410DB73529282DB700176DE9 /* Endpoint.swift */,
+				410DB75129282F7900176DE9 /* Log.swift */,
+				410DB73229282DB700176DE9 /* Network.swift */,
+				410DB73329282DB700176DE9 /* Pagination.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -184,18 +230,14 @@
 		410DB75729282FB300176DE9 /* iOSCleanArchitecture */ = {
 			isa = PBXGroup;
 			children = (
-				410DB75829282FC900176DE9 /* Configuration */,
-				C178031B291673D800E9E0AE /* iOSCleanArchitecture */,
+				410DB72729281A3B00176DE9 /* DI */,
+				410B18C62929133C00A69FD6 /* Services */,
+				C1D3C32629167417000C522C /* Data */,
+				410B18C129290B7600A69FD6 /* Domain */,
+				C1D3C32429167401000C522C /* Presentation */,
+				C1E97E9D292569970086F3A8 /* Resources */,
 			);
 			path = iOSCleanArchitecture;
-			sourceTree = "<group>";
-		};
-		410DB75829282FC900176DE9 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				410DB75929282FC900176DE9 /* Configuration.swift */,
-			);
-			path = Configuration;
 			sourceTree = "<group>";
 		};
 		41C2B9062926D79600ADFD30 /* Components */ = {
@@ -234,9 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				410DB74F29282F7900176DE9 /* AppInfoManager.swift */,
-				410DB75229282F7A00176DE9 /* Collection+Extension.swift */,
-				410DB75129282F7900176DE9 /* Log.swift */,
-				410DB75029282F7900176DE9 /* Optional+Extension.swift */,
+				410B18BE2928F94900A69FD6 /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -255,18 +295,6 @@
 				C1780319291673D800E9E0AE /* iOSCleanArchitecture.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C178031B291673D800E9E0AE /* iOSCleanArchitecture */ = {
-			isa = PBXGroup;
-			children = (
-				410DB72729281A3B00176DE9 /* DI */,
-				410DB72C29282D0D00176DE9 /* API */,
-				C1D3C32629167417000C522C /* Data */,
-				C1D3C32429167401000C522C /* Presentation */,
-				C1E97E9D292569970086F3A8 /* Resources */,
-			);
-			path = iOSCleanArchitecture;
 			sourceTree = "<group>";
 		};
 		C1D3C32429167401000C522C /* Presentation */ = {
@@ -292,7 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				C1D3C329291674C5000C522C /* DTO */,
-				C1D3C32A2917B1B5000C522C /* BO */,
+				C1D3C32829167446000C522C /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -300,7 +328,7 @@
 		C1D3C32829167446000C522C /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				410DB72A29282AD300176DE9 /* HomeRepository.swift */,
+				410B18C229290C7B00A69FD6 /* Home */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -333,10 +361,9 @@
 			children = (
 				41C2B9082926D83C00ADFD30 /* Coordinator */,
 				410DB7202928008D00176DE9 /* Dependencies */,
-				410DB72629280BD900176DE9 /* Representables */,
-				410DB72529280BC300176DE9 /* UseCases */,
-				41C2B90A2926D85500ADFD30 /* View */,
+				410B18C529290E4400A69FD6 /* Representables */,
 				41C2B9092926D84900ADFD30 /* ViewModel */,
+				41C2B90A2926D85500ADFD30 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -445,7 +472,8 @@
 				410DB73D29282DB700176DE9 /* Pagination.swift in Sources */,
 				C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */,
 				410DB75429282F7A00176DE9 /* Optional+Extension.swift in Sources */,
-				410DB75A29282FC900176DE9 /* Configuration.swift in Sources */,
+				410DB75A29282FC900176DE9 /* APIConfiguration.swift in Sources */,
+				410B18C92929162400A69FD6 /* HomeUseCaseRepresentables.swift in Sources */,
 				410DB72B29282AD300176DE9 /* HomeRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,7 +565,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FTAKQJ3877;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iOSCleanArchitecture/iOSCleanArchitecture/Resources/Info.plist;
+				INFOPLIST_FILE = iOSCleanArchitecture/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MVVM;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -685,7 +713,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FTAKQJ3877;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iOSCleanArchitecture/iOSCleanArchitecture/Resources/Info.plist;
+				INFOPLIST_FILE = iOSCleanArchitecture/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "MVVM Demo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -718,7 +746,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FTAKQJ3877;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iOSCleanArchitecture/iOSCleanArchitecture/Resources/Info.plist;
+				INFOPLIST_FILE = iOSCleanArchitecture/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "MVVM Dev";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
