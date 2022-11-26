@@ -1,98 +1,47 @@
-# iOSCleanArchitecture
-iOSCleanArchitecture is a template project that conforms a MVVM architecture focused in big projects buildings. It includes great features like UIKit, Combine, AsyncAwait, UseCases/Repositories, Demo/Develop/Production environments and much more
+# MVVM Scene
+Template to create a scene based on this architecture
 
-## General explanation
+## Installation
+To get it, only you have to do is download the ```MVVM Scene.xctemplate``` folder and include it in your local path:
 
-Clean architecture is not a new concept as we can see here:
+```/Users/YourMacUser/Library/Developer/Xcode/Templates/File Templates/Rudo/```
 
-![CleanArchitecture](https://user-images.githubusercontent.com/56566735/202541752-2d7d0acc-118d-4a9e-b2cc-60020dcae4b5.jpeg)
+In case you don't have some folders, create it
 
-Basically we have to be clear about one concept and that is Dependency we have to isolate the dependencies of our code between layers to isolate and create only one direction of dependencies that goes from the outermost layer to the innermost layer
+## How to use
+1. Select ```New File...``` in Scene group
 
-## Project structure
+![1](https://user-images.githubusercontent.com/56566735/204095836-ef6d570b-7cfb-4c3a-a886-81aa4fd7aab8.png)
 
-Just as the description of the layer system must specify and describe what each of these does, we must translate to our project the same behavior. To do this we will create a series of folders that will contain the logic of each of these layers
+2. Select ```MVVM Scene``` template
 
-### Main folders
+![2](https://user-images.githubusercontent.com/56566735/204095870-2c4dc9d4-506a-425b-b632-2d98f03820c5.png)
 
-This would be the distribution of folders that will contain our project:
+3. Choose the new scene name
 
-```
-├── DI
-├── Services
-├── Data
-├── Domain
-└── Presentation
-```
+![3](https://user-images.githubusercontent.com/56566735/204095873-c2785db6-23ab-447f-aabe-78a75d65460f.png)
 
-### Detailed overview and description
+4. Don't touch anything, press ```Create```
 
-Each of these components has a function and should not be mixed with each other. Being clear about where each of the logics we implement should go:
+![4](https://user-images.githubusercontent.com/56566735/204095885-a872df19-31b7-4592-8baf-097a0946af34.png)
 
-```
-├── DI
-├── Services
-│   ├── DB
-│   └── API
-├── Data
-│   ├── DTO
-│   └── Repositories
-├── Domain
-│    ├── BO
-│    └── UseCases
-└── Presentation
-    ├── App
-    ├── Components
-    └── Scenes
-```
+5. We will see that Xcode has create folders, not groups. But that has solution
 
-- **DI**: This layer contains the main tree of dependency injection of our project that is used throughout the app
+![5](https://user-images.githubusercontent.com/56566735/204095896-a479c696-6883-4530-89fb-4533df2507cb.png)
 
-- **Services**: This layer is responsible for getting data from different environments like API, Local DB, Cache, etc
+6. Go to ```NewScene``` folder in finder and move it to other path, for example ```Downloads```. We will see that ```NewScene``` folder in Xcode turned red, thats why it is a folder reference, not a Xcode group
 
-- **Data**: This layer is the one that will contain all the components that are in charge of obtaining and storing information
-    - **DTO**: We will store all the Data Transfer Object (DTO)
-    - **Repository**: Contains all implementations to obtain data either from an API or from a database, divided by scenes
+![6](https://user-images.githubusercontent.com/56566735/204095908-eabf4e90-782e-4566-95a9-4bee3705f12a.png)
 
-- **Domain**: This layer is in charge of defining entities and use cases per Domain
-    - **BO**: These are models used beyond the DTO to manage database or core data
-    - **UseCases**: List all the functionalities of our application, divided by scenes. Example: Get, Delete, Create, Update
-    
-- **Presentation**: The presentation layer will keep everything related to UI and its management
+7. Drag ```NewScene``` folder that moved to ```Downloads``` and drop in Xcode ```Scene``` group. Press ```Finish```
 
-### Presentation layer - Scenes
+![7](https://user-images.githubusercontent.com/56566735/204095913-1dd2825d-7a5b-487b-bff7-4db57cf28e6c.png)
 
-Each sceme is composed by a series of files that must be implemented in each one of them:
+8. That's all! Enjoy 😊
 
-```
-└── Scenes
-    └── Home
-        ├── Coordinator
-        ├── Dependencies
-        ├── Representables
-        ├── ViewModel
-        └── View
-```
-
-- **Coordinator**: Responsible for the scene navigation
-
-- **Dependencies**: Scene dependencies needed to build the entire scene
-
-- **Representables**: Protocols with needed parameters to print the UI layer, shared between ViewModel, ViewController and subviews
-
-- **ViewModel**: Responsible for the communications between UseCases and View. Thanks to reactive Combine states
-
-- **View**: Visual layer of the controller, starting with the ViewController and divided by subviews. Thanks to reactive Combine events
+![8](https://user-images.githubusercontent.com/56566735/204095918-d500cec7-4289-4098-9ebe-2836526ab98e.png)
 
 ## Author
-
-Fernando Salom
-
-https://github.com/fsalom
-
-https://www.linkedin.com/in/fsalom/
-
-## Co-author
 
 Miguel Ferrer
 
