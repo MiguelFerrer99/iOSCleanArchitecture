@@ -4,7 +4,7 @@ Template to create a scene based on this architecture
 ## Installation
 To get it, only you have to do is download the ```MVVM Scene.xctemplate``` folder and include it in your local path:
 
-```/Users/YourMacUser/Library/Developer/Xcode/Templates/File Templates/Rudo/```
+```/Users/YourMacUser/Library/Developer/Xcode/Templates/File Templates/My Templates/```
 
 In case you don't have some folders, create it
 
