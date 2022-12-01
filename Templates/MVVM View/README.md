@@ -11,35 +11,27 @@ In case you don't have some folders, create it
 ## How to use
 1. Select ```New File...``` in Scene < View group
 
-![1](https://user-images.githubusercontent.com/56566735/204095836-ef6d570b-7cfb-4c3a-a886-81aa4fd7aab8.png)
+<img width="463" alt="1" src="https://user-images.githubusercontent.com/56566735/205050707-25b8b8c8-7225-499a-956a-5ab4bc4dd2e9.png">
 
 2. Select ```MVVM View``` template
 
-![2](https://user-images.githubusercontent.com/56566735/204095870-2c4dc9d4-506a-425b-b632-2d98f03820c5.png)
+<img width="717" alt="2" src="https://user-images.githubusercontent.com/56566735/205050735-7a83f45b-a89e-4c67-ad57-c84b812d4255.png">
 
-3. Choose the new scene name
+3. Choose the new view name
 
-![3](https://user-images.githubusercontent.com/56566735/204095873-c2785db6-23ab-447f-aabe-78a75d65460f.png)
+<img width="716" alt="3" src="https://user-images.githubusercontent.com/56566735/205050767-1accd58a-6693-4306-9836-98209b580c7c.png">
 
 4. Don't touch anything, press ```Create```
 
-![4](https://user-images.githubusercontent.com/56566735/204095885-a872df19-31b7-4592-8baf-097a0946af34.png)
+<img width="855" alt="4" src="https://user-images.githubusercontent.com/56566735/205050804-f51215e5-8f34-431a-9541-ea877c72b99c.png">
 
-5. We will see that Xcode has create folders, not groups. But that has solution
+5. Now you can group this two files in a group
 
-![5](https://user-images.githubusercontent.com/56566735/204095896-a479c696-6883-4530-89fb-4533df2507cb.png)
+<img width="639" alt="5" src="https://user-images.githubusercontent.com/56566735/205050835-2e56afbb-4c91-464a-b441-8fc2bb645f82.png">
 
-6. Go to ```NewScene``` folder in finder and move it to other path, for example ```Downloads```. We will see that ```NewScene``` folder in Xcode turned red, thats why it is a folder reference, not a Xcode group
+6. That's all! Enjoy 😊
 
-![6](https://user-images.githubusercontent.com/56566735/204095908-eabf4e90-782e-4566-95a9-4bee3705f12a.png)
-
-7. Drag ```NewScene``` folder that moved to ```Downloads``` and drop in Xcode ```Scene``` group. Press ```Finish```
-
-![7](https://user-images.githubusercontent.com/56566735/204095913-1dd2825d-7a5b-487b-bff7-4db57cf28e6c.png)
-
-8. That's all! Enjoy 😊
-
-![8](https://user-images.githubusercontent.com/56566735/204095918-d500cec7-4289-4098-9ebe-2836526ab98e.png)
+<img width="461" alt="6" src="https://user-images.githubusercontent.com/56566735/205050885-565d4e7a-8b08-4c78-b475-5b9d1201609b.png">
 
 ## Author
 
