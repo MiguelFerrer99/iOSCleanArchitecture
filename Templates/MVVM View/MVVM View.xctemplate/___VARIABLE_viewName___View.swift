@@ -15,7 +15,7 @@ enum ___FILEBASENAME___State {
 final class ___FILEBASENAME___: XibView {
     private var subscriptions = Set<AnyCancellable>()
     private var subject = PassthroughSubject<___FILEBASENAME___State, Never>()
-    public var publisher: AnyPublisher<___FILEBASENAME___State, Never> {
+    var publisher: AnyPublisher<___FILEBASENAME___State, Never> {
         subject.eraseToAnyPublisher()
     }
     
