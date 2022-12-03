@@ -10,12 +10,13 @@ import UIKit
 final class AppDependencies {
     static let shared = AppDependencies()
     
+    private let navigationController = UINavigationController()
     var window: UIWindow?
     
     private init() {}
     
     func resolve() -> UINavigationController {
-        UINavigationController()
+        navigationController
     }
 }
 

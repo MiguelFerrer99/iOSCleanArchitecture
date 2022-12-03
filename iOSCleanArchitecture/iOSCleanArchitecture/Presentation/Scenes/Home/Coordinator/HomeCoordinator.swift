@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeCoordinator {
-    func setAsRoot(with window: UIWindow)
+    func start()
 }
 
 final class DefaultHomeCoordinator {
@@ -25,7 +25,8 @@ final class DefaultHomeCoordinator {
 }
 
 extension DefaultHomeCoordinator: HomeCoordinator {
-    func setAsRoot(with window: UIWindow) {
+    func start() {
+        guard let window = AppDependencies.shared.window else { return }
         navigationController.setViewControllers([dependencies.resolve()], animated: true)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

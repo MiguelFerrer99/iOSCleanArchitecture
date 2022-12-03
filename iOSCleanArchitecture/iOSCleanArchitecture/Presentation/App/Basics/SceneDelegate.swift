@@ -48,8 +48,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 private extension SceneDelegate {
     func setRootScene() {
-        guard let window = AppDependencies.shared.window else { return }
         let homeCoordinator = AppDependencies.shared.resolveHomeCoordinator()
-        homeCoordinator.setAsRoot(with: window)
+        homeCoordinator.start()
     }
 }
