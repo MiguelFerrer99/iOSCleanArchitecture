@@ -26,7 +26,7 @@ final class ___VARIABLE_sceneName___ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setAppearance()
+        setupViews()
         bind()
         viewModel.viewDidLoad()
     }
@@ -38,7 +38,11 @@ final class ___VARIABLE_sceneName___ViewController: UIViewController {
 }
 
 private extension ___VARIABLE_sceneName___ViewController {
-    func setAppearance() {
+    var sceneNavigationController: UINavigationController {
+        dependencies.external.resolve()
+    }
+    
+    func setupViews() {
         // Configure views
     }
     

@@ -14,6 +14,7 @@ final class HomeViewController: UIViewController {
     private let viewModel: HomeViewModel
     private let dependencies: HomeDependenciesResolver
     private var subscriptions: Set<AnyCancellable> = []
+    
     private lazy var exampleView: ExampleView = {
         let view = ExampleView()
         view.configure(with: "Hello, World!")
@@ -33,7 +34,7 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setAppearance()
+        setupViews()
         bind()
         viewModel.viewDidLoad()
     }
@@ -45,7 +46,11 @@ final class HomeViewController: UIViewController {
 }
 
 private extension HomeViewController {
-    func setAppearance() {
+    var sceneNavigationController: UINavigationController {
+        dependencies.external.resolve()
+    }
+    
+    func setupViews() {
         configureExampleView()
     }
     
