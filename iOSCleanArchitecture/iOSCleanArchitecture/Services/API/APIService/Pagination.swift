@@ -11,10 +11,10 @@ final class Pagination<T> {
     typealias Item = T
     
     fileprivate var items: [Item] = []
-    fileprivate var nextPage: Int?
+    fileprivate var nextPageUrl: String?
     fileprivate(set) var currentPage = 1
     
-    var isLastPage: Bool { nextPage.isNil }
+    var isLastPage: Bool { nextPageUrl.isNil }
     
     func setItems(_ items: [Item]) {
         if currentPage == 1 {
@@ -25,8 +25,8 @@ final class Pagination<T> {
         currentPage += 1
     }
     
-    func setNextPage(_ nextPage: Int?) {
-        self.nextPage = nextPage
+    func setNextPageUrl(_ nextPageUrl: String?) {
+        self.nextPageUrl = nextPageUrl
     }
     
     func getItems() -> [Item] {

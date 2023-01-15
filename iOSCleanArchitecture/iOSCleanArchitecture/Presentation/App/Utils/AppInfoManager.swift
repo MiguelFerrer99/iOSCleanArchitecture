@@ -11,7 +11,6 @@ final class AppInfoManager {
     enum Key: String {
         case refresh_token,
              access_token,
-             expires_in,
              logged,
              userID
     }

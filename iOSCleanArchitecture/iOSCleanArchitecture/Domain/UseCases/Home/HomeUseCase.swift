@@ -5,9 +5,7 @@
 //  Created by Miguel Ferrer Fornali on 19/11/22.
 //
 
-protocol HomeUseCase {
-    // Add functions to get data from repository
-}
+protocol HomeUseCase {}
 
 final class DefaultHomeUseCase {
     private let repository: HomeRepository
@@ -17,6 +15,4 @@ final class DefaultHomeUseCase {
     }
 }
 
-extension DefaultHomeUseCase: HomeUseCase {
-    // Implement functions and do logic
-}
+extension DefaultHomeUseCase: HomeUseCase {}

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/mferrerf/Desktop/MIGUEL/DOCUMENTOS/MIS_COSAS/IOS/ARQUITECTURAS/MVVM_AsyncAwait_UIKit_Pro_Combine/iOSCleanArchitecture/iOSCleanArchitecture.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

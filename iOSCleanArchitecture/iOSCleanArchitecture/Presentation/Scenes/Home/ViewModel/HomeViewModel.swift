@@ -23,7 +23,7 @@ final class HomeViewModel {
     }
     
     func viewDidLoad() {
-        // Subscribe events and execute UseCases
+        getInfo()
     }
 }
 
@@ -31,10 +31,12 @@ private extension HomeViewModel {
     var coordinator: HomeCoordinator {
         dependencies.resolve()
     }
+    
+    func getInfo() {
+        Task { @MainActor [weak self] in
+            guard let self = self else { return }
+            // let info = try? await self.homeUseCase.getInfo()
+            self.stateSubject.send(.idle)
+        }
+    }
 }
-
-// MARK: Subscriptions
-private extension HomeViewModel {}
-
-// MARK: Publishers
-private extension HomeViewModel {}

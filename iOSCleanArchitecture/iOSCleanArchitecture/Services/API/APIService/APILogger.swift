@@ -48,14 +48,15 @@ final class APILogger {
         print("------------------------------------------")
         print("➡️ \(method) \(url)")
         print("HEADERS: \(headers)")
-        print("PARAMETERS: \(params ?? "")")
+        print("BODY PARAMETERS: \(params ?? "")")
         print("------------------------------------------")
     }
     
-    static func thisResponse(_ response: HTTPURLResponse, data: Data) {
+    static func thisResponse(_ response: URLResponse, data: Data) {
+        guard let response = response as? HTTPURLResponse else { return }
         let code = response.statusCode
         let url  = response.url?.absoluteString ?? ""
-        let icon  = [200, 201, 204].contains(code) ? "✅" : "❌"
+        let icon = [200, 201, 204].contains(code) ? "✅" : "❌"
         
         print("------------------------------------------")
         print("\(icon) 🔽 [\(code)] \(url)")
@@ -80,7 +81,7 @@ final class APILogger {
 extension Data {
     var prettyPrintedJSONString: NSString? { /// NSString gives us a nice sanitized debugDescription
         guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
-              let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
+              let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted, .withoutEscapingSlashes]),
               let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }
         
         return prettyPrintedString

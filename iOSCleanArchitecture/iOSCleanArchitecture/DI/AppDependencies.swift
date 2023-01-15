@@ -8,15 +8,27 @@
 import UIKit
 
 final class AppDependencies {
-    static let shared = AppDependencies()
-    
     private let navigationController = UINavigationController()
-    var window: UIWindow?
+    private var window: UIWindow?
     
-    private init() {}
+    func setWindow(_ window: UIWindow) {
+        self.window = window
+    }
+    
+    func getWindow() -> UIWindow? {
+        window
+    }
     
     func resolve() -> UINavigationController {
         navigationController
+    }
+    
+    func resolveAppDependencies() -> AppDependencies {
+        self
+    }
+    
+    func resolveAPIService() -> APIService {
+        DefaultAPIService()
     }
 }
 

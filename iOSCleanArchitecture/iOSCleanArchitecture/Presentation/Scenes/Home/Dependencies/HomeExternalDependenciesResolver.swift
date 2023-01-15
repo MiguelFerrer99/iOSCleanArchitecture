@@ -7,8 +7,9 @@
 
 import UIKit
 
-protocol HomeExternalDependenciesResolver {
+protocol HomeExternalDependenciesResolver: CommonExternalDependenciesResolver {
     func resolve() -> UINavigationController
+    func resolveAppDependencies() -> AppDependencies
     func resolveHomeCoordinator() -> HomeCoordinator
 }
 
