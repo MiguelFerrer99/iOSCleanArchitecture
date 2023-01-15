@@ -1,5 +1,5 @@
 # iOSCleanArchitecture
-iOSCleanArchitecture is a template project that conforms a MVVM architecture focused in big projects buildings. It includes great features like UIKit, Combine, AsyncAwait, UseCases/Repositories, Demo/Develop/Production environments and much more
+iOSCleanArchitecture is a template project that conforms a MVVM architecture focused in big projects buildings. It includes great features like UIKit, Combine, Async/Await, UseCases/Repositories, Demo/Develop/Production environments and much more
 
 ## General explanation
 
@@ -38,7 +38,7 @@ Each of these components has a function and should not be mixed with each other.
 │   ├── DTO
 │   └── Repositories
 ├── Domain
-│    ├── BO
+│    ├── Representables
 │    └── UseCases
 └── Presentation
     ├── App
@@ -55,7 +55,7 @@ Each of these components has a function and should not be mixed with each other.
     - **Repository**: Contains all implementations to obtain data either from an API or from a database, divided by scenes
 
 - **Domain**: This layer is in charge of defining entities and use cases per Domain
-    - **BO**: These are models used beyond the DTO to manage database or core data
+    - **Representables**: These are models used beyond the DTO to manage database or core data
     - **UseCases**: List all the functionalities of our application, divided by scenes. Example: Get, Delete, Create, Update
     
 - **Presentation**: The presentation layer will keep everything related to UI and its management
