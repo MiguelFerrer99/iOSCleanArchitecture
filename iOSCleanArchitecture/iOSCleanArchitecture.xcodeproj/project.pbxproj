@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4106092D2928602600E44A77 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106092C2928602600E44A77 /* TokenDTO.swift */; };
-		410B18C92929162400A69FD6 /* HomeUseCaseRepresentables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B18C82929162400A69FD6 /* HomeUseCaseRepresentables.swift */; };
 		410DB72929281A3B00176DE9 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB72829281A3B00176DE9 /* AppDependencies.swift */; };
 		410DB72B29282AD300176DE9 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB72A29282AD300176DE9 /* HomeRepository.swift */; };
 		410DB73C29282DB700176DE9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73229282DB700176DE9 /* APIService.swift */; };
 		410DB73D29282DB700176DE9 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73329282DB700176DE9 /* Pagination.swift */; };
-		410DB73E29282DB700176DE9 /* APIAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73429282DB700176DE9 /* APIAuthManager.swift */; };
+		410DB73E29282DB700176DE9 /* APIRefreshActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73429282DB700176DE9 /* APIRefreshActor.swift */; };
 		410DB73F29282DB700176DE9 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73529282DB700176DE9 /* APIEndpoint.swift */; };
 		410DB74029282DB700176DE9 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB73729282DB700176DE9 /* AuthEndpoint.swift */; };
 		410DB74829282E1500176DE9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 410DB74429282E1500176DE9 /* Localizable.strings */; };
@@ -22,7 +21,6 @@
 		410DB75429282F7A00176DE9 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75029282F7900176DE9 /* Optional+Extension.swift */; };
 		410DB75529282F7A00176DE9 /* APILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75129282F7900176DE9 /* APILogger.swift */; };
 		410DB75629282F7A00176DE9 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75229282F7A00176DE9 /* Collection+Extension.swift */; };
-		410DB75A29282FC900176DE9 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410DB75929282FC900176DE9 /* APIConfiguration.swift */; };
 		41882BD0292984520044E186 /* Example.json in Resources */ = {isa = PBXBuildFile; fileRef = 41882BCF292984520044E186 /* Example.json */; };
 		41882BD2292989D20044E186 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BD1292989D20044E186 /* DBService.swift */; };
 		41882BD829298D700044E186 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BD729298D700044E186 /* ExampleView.swift */; };
@@ -30,6 +28,9 @@
 		41882BDC29298EC30044E186 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41882BDB29298EC30044E186 /* UIView+Extension.swift */; };
 		4198842229299E06002B21E9 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4198842129299E06002B21E9 /* Example.swift */; };
 		4198842429299E60002B21E9 /* HomeRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4198842329299E60002B21E9 /* HomeRepresentable.swift */; };
+		41A4A5872974C1A900F1F191 /* CommonExternalDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4A5862974C1A900F1F191 /* CommonExternalDependenciesResolver.swift */; };
+		41A4A5892974C2BE00F1F191 /* ExampleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4A5882974C2BE00F1F191 /* ExampleDTO.swift */; };
+		41A4A58C2974C36400F1F191 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 41A4A58B2974C36400F1F191 /* IQKeyboardManagerSwift */; };
 		41BCB891292990F600E6E757 /* ExampleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BCB890292990F600E6E757 /* ExampleView.xib */; };
 		41BCB8932929936100E6E757 /* HomeDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB8922929936100E6E757 /* HomeDependenciesResolver.swift */; };
 		41BCB8952929937C00E6E757 /* HomeExternalDependenciesResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BCB8942929937C00E6E757 /* HomeExternalDependenciesResolver.swift */; };
@@ -46,12 +47,11 @@
 
 /* Begin PBXFileReference section */
 		4106092C2928602600E44A77 /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
-		410B18C82929162400A69FD6 /* HomeUseCaseRepresentables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCaseRepresentables.swift; sourceTree = "<group>"; };
 		410DB72829281A3B00176DE9 /* AppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		410DB72A29282AD300176DE9 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		410DB73229282DB700176DE9 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		410DB73329282DB700176DE9 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
-		410DB73429282DB700176DE9 /* APIAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAuthManager.swift; sourceTree = "<group>"; };
+		410DB73429282DB700176DE9 /* APIRefreshActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRefreshActor.swift; sourceTree = "<group>"; };
 		410DB73529282DB700176DE9 /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		410DB73729282DB700176DE9 /* AuthEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
 		410DB74529282E1500176DE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -61,7 +61,6 @@
 		410DB75029282F7900176DE9 /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		410DB75129282F7900176DE9 /* APILogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILogger.swift; sourceTree = "<group>"; };
 		410DB75229282F7A00176DE9 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
-		410DB75929282FC900176DE9 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		41882BCF292984520044E186 /* Example.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Example.json; sourceTree = "<group>"; };
 		41882BD1292989D20044E186 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
 		41882BD729298D700044E186 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
@@ -69,6 +68,8 @@
 		41882BDB29298EC30044E186 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4198842129299E06002B21E9 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		4198842329299E60002B21E9 /* HomeRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepresentable.swift; sourceTree = "<group>"; };
+		41A4A5862974C1A900F1F191 /* CommonExternalDependenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExternalDependenciesResolver.swift; sourceTree = "<group>"; };
+		41A4A5882974C2BE00F1F191 /* ExampleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDTO.swift; sourceTree = "<group>"; };
 		41BCB890292990F600E6E757 /* ExampleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleView.xib; sourceTree = "<group>"; };
 		41BCB8922929936100E6E757 /* HomeDependenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependenciesResolver.swift; sourceTree = "<group>"; };
 		41BCB8942929937C00E6E757 /* HomeExternalDependenciesResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExternalDependenciesResolver.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A4A58C2974C36400F1F191 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +111,7 @@
 		410B18C129290B7600A69FD6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C1D3C32A2917B1B5000C522C /* BO */,
+				C1D3C32A2917B1B5000C522C /* Representables */,
 				410DB72529280BC300176DE9 /* UseCases */,
 			);
 			path = Domain;
@@ -127,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				C15BA614291AAE7600E0CF95 /* HomeUseCase.swift */,
-				410B18C82929162400A69FD6 /* HomeUseCaseRepresentables.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -178,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				410DB72829281A3B00176DE9 /* AppDependencies.swift */,
+				41A4A5862974C1A900F1F191 /* CommonExternalDependenciesResolver.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -203,10 +205,9 @@
 		410DB73129282DB700176DE9 /* APIService */ = {
 			isa = PBXGroup;
 			children = (
-				410DB75929282FC900176DE9 /* APIConfiguration.swift */,
-				410DB73429282DB700176DE9 /* APIAuthManager.swift */,
 				410DB73529282DB700176DE9 /* APIEndpoint.swift */,
 				410DB75129282F7900176DE9 /* APILogger.swift */,
+				410DB73429282DB700176DE9 /* APIRefreshActor.swift */,
 				410DB73229282DB700176DE9 /* APIService.swift */,
 				410DB73329282DB700176DE9 /* Pagination.swift */,
 			);
@@ -360,17 +361,18 @@
 		C1D3C329291674C5000C522C /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				41A4A5882974C2BE00F1F191 /* ExampleDTO.swift */,
 				4106092C2928602600E44A77 /* TokenDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
 		};
-		C1D3C32A2917B1B5000C522C /* BO */ = {
+		C1D3C32A2917B1B5000C522C /* Representables */ = {
 			isa = PBXGroup;
 			children = (
 				4198842129299E06002B21E9 /* Example.swift */,
 			);
-			path = BO;
+			path = Representables;
 			sourceTree = "<group>";
 		};
 		C1D3C32C2917B229000C522C /* Scenes */ = {
@@ -419,6 +421,9 @@
 			dependencies = (
 			);
 			name = iOSCleanArchitecture;
+			packageProductDependencies = (
+				41A4A58B2974C36400F1F191 /* IQKeyboardManagerSwift */,
+			);
 			productName = clean;
 			productReference = C1780319291673D800E9E0AE /* iOSCleanArchitecture.app */;
 			productType = "com.apple.product-type.application";
@@ -431,7 +436,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					C1780318291673D800E9E0AE = {
 						CreatedOnToolsVersion = 14.1;
@@ -448,6 +453,9 @@
 				es,
 			);
 			mainGroup = C1780310291673D800E9E0AE;
+			packageReferences = (
+				41A4A58A2974C36400F1F191 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = C178031A291673D800E9E0AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -482,8 +490,9 @@
 				410DB72929281A3B00176DE9 /* AppDependencies.swift in Sources */,
 				C1D3C3382917B340000C522C /* HomeViewController.swift in Sources */,
 				C15BA615291AAE7600E0CF95 /* HomeUseCase.swift in Sources */,
-				410DB73E29282DB700176DE9 /* APIAuthManager.swift in Sources */,
+				410DB73E29282DB700176DE9 /* APIRefreshActor.swift in Sources */,
 				410DB74029282DB700176DE9 /* AuthEndpoint.swift in Sources */,
+				41A4A5892974C2BE00F1F191 /* ExampleDTO.swift in Sources */,
 				C1D3C3452917B816000C522C /* HomeViewModel.swift in Sources */,
 				410DB75529282F7A00176DE9 /* APILogger.swift in Sources */,
 				4198842229299E06002B21E9 /* Example.swift in Sources */,
@@ -492,6 +501,7 @@
 				410DB73C29282DB700176DE9 /* APIService.swift in Sources */,
 				410DB75629282F7A00176DE9 /* Collection+Extension.swift in Sources */,
 				41882BDC29298EC30044E186 /* UIView+Extension.swift in Sources */,
+				41A4A5872974C1A900F1F191 /* CommonExternalDependenciesResolver.swift in Sources */,
 				C1D3C3492917B952000C522C /* HomeCoordinator.swift in Sources */,
 				410DB75329282F7A00176DE9 /* AppInfoManager.swift in Sources */,
 				C178031D291673D800E9E0AE /* AppDelegate.swift in Sources */,
@@ -502,9 +512,7 @@
 				C178031F291673D800E9E0AE /* SceneDelegate.swift in Sources */,
 				410DB75429282F7A00176DE9 /* Optional+Extension.swift in Sources */,
 				41882BDA29298E320044E186 /* XibView.swift in Sources */,
-				410DB75A29282FC900176DE9 /* APIConfiguration.swift in Sources */,
 				41BCB8952929937C00E6E757 /* HomeExternalDependenciesResolver.swift in Sources */,
-				410B18C92929162400A69FD6 /* HomeUseCaseRepresentables.swift in Sources */,
 				4198842429299E60002B21E9 /* HomeRepresentable.swift in Sources */,
 				410DB72B29282AD300176DE9 /* HomeRepository.swift in Sources */,
 			);
@@ -537,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -582,6 +591,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Production;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -624,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -676,7 +687,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Demo;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Demo;
@@ -685,6 +696,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -730,6 +742,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Develop;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -826,6 +839,25 @@
 			defaultConfigurationName = Develop;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41A4A58A2974C36400F1F191 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41A4A58B2974C36400F1F191 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41A4A58A2974C36400F1F191 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C1780311291673D800E9E0AE /* Project object */;
 }

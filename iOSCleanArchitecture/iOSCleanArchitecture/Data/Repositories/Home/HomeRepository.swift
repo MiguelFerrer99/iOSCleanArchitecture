@@ -7,10 +7,14 @@
 
 protocol HomeRepository {}
 
-final class DefaultHomeRepository: HomeRepository {
-    private let dependencies: HomeDependenciesResolver
+final class DefaultHomeRepository {
+    private let dependencies: HomeExternalDependenciesResolver
+    private let apiService: APIService
     
-    init(dependencies: HomeDependenciesResolver) {
+    init(dependencies: HomeExternalDependenciesResolver) {
         self.dependencies = dependencies
+        self.apiService = dependencies.resolveAPIService()
     }
 }
+
+extension DefaultHomeRepository: HomeRepository {}

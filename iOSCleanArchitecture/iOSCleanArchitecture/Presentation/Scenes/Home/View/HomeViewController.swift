@@ -10,11 +10,9 @@ import Combine
 
 final class HomeViewController: UIViewController {
     @IBOutlet private weak var stackView: UIStackView!
-    
     private let viewModel: HomeViewModel
     private let dependencies: HomeDependenciesResolver
     private var subscriptions: Set<AnyCancellable> = []
-    
     private lazy var exampleView: ExampleView = {
         let view = ExampleView()
         view.configure(with: "Hello, World!")

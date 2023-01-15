@@ -26,7 +26,7 @@ final class DefaultHomeCoordinator {
 
 extension DefaultHomeCoordinator: HomeCoordinator {
     func start() {
-        guard let window = AppDependencies.shared.window else { return }
+        guard let window = dependencies.external.resolveAppDependencies().getWindow() else { return }
         navigationController.setViewControllers([dependencies.resolve()], animated: true)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

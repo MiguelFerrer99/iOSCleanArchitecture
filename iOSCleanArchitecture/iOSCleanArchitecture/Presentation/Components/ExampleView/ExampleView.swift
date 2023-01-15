@@ -14,7 +14,6 @@ enum ExampleViewState {
 
 final class ExampleView: XibView {
     @IBOutlet private weak var titleLabel: UILabel!
-    
     private var subscriptions = Set<AnyCancellable>()
     private var subject = PassthroughSubject<ExampleViewState, Never>()
     var publisher: AnyPublisher<ExampleViewState, Never> {
