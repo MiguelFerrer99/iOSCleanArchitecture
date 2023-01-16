@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Foundation
 
 enum HomeViewModelState {
     case idle
@@ -32,11 +33,18 @@ private extension HomeViewModel {
         dependencies.resolve()
     }
     
-    func getInfo() {
-        Task { @MainActor [weak self] in
+    func sendStateSubject(_ stateSubject: HomeViewModelState) {
+        DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            // let info = try? await self.homeUseCase.getInfo()
-            self.stateSubject.send(.idle)
+            self.stateSubject.send(stateSubject)
         }
     }
+    
+    func getInfo() {
+        Task {
+            // guard let info = try? await self.homeUseCase.getInfo() else { return }
+            sendStateSubject(.idle)
+        }
+    }
+    
 }
