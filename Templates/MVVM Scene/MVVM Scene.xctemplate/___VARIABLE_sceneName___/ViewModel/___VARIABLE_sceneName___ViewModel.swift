@@ -23,7 +23,7 @@ final class ___VARIABLE_sceneName___ViewModel {
     }
     
     func viewDidLoad() {
-        // Subscribe events and execute UseCases
+        // Execute UseCases
     }
 }
 
@@ -32,9 +32,3 @@ private extension ___VARIABLE_sceneName___ViewModel {
         dependencies.resolve()
     }
 }
-
-// MARK: Subscriptions
-private extension ___VARIABLE_sceneName___ViewModel {}
-
-// MARK: Publishers
-private extension ___VARIABLE_sceneName___ViewModel {}
